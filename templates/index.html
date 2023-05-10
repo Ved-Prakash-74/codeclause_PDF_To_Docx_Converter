@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pdf To Docx Converter</title>
+    <style>
+        body {
+            background: linear-gradient(133deg, #4abeb2, #3c57d2);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 800px;
+            height: 280px;
+            margin: center;
+            background: white;
+        }
+
+        h1 {
+            color: #00aced;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        #form {
+            width: 96%;
+            height: 100%;
+            margin-top: -20px;
+            padding: 20px;
+        }
+
+        #form>h1 {
+            padding: 0px 5px;
+            font-size: 25px;
+            margin-top: 2px;
+        }
+
+        #form div {
+            height: 60px;
+            margin: 20px auto;
+            padding: 5px;
+        }
+
+        #form .pr {
+            height: 110px;
+            display: hidden;
+        }
+
+        #form label {
+            background: #f5f5f5;
+            display: block;
+            padding: 12px;
+            border-radius: 10px;
+            width: 90%;
+            line-height: 10px;
+            border: 2px solid #e5e5e5;
+            position: relative;
+        }
+
+        #form label:before {
+            position: absolute;
+            content: "Browse";
+            right: -2px;
+            top: -2px;
+            width: 100px;
+            height: 107%;
+            line-height: 40px;
+            background: #cccccc;
+            text-align: center;
+            border-radius: 0px 10px 0px 10px;
+            cursor: pointer;
+        }
+
+        #for-upload {
+            padding: 10px 35px;
+            color: white;
+            font-size: 15px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #00aced;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h1>
+                PDF To Docx Converter
+            </h1>
+            <form action="/index" id="form" method="POST" enctype="multipart/form-data">
+                <div>
+                    <input type="file" id="up" name="filename" style="display: none;" accept=".pdf">
+                    <label for="up">Select PDF Files</label>
+                    <div id="file-upload-filename"></div>
+                </div>
+                <input type="submit" id="for-upload" value="Convert">
+            </form>
+
+        </center>
+    </div>
+
+    <script>
+        let file = document.getElementById('up');
+
+        file.oninput = () => {
+            let filename = file.files[0].name;
+            document.querySelector('label').innerText = filename;
+            getFile(filename);
+        }
+
+    </script>
+
+</body>
+
+</html>
