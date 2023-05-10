@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Converted PDF File to Docx</title>
+
+    <style>
+        body {
+            background: linear-gradient(133deg, #4abeb2, #3c57d2);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 550px;
+            height: 170px;
+
+            margin: center;
+            background: white;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .container h1 {
+            padding-top: 25px;
+            color: #00aced;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        .btn {
+            padding: 10px 35px;
+            color: white;
+            font-size: 15px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #00aced;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <h1>Converted Your File To Docx</h1>
+            <form action="/docx" method="POST">
+                <input value={{variable}} id="3" name="filename" type="hidden">
+                <button class="btn"><i class="fa fa-download"></i>Download in Word</button>
+            </form>
+        </div>
+    </center>
+
+</body>
+
+</html>
