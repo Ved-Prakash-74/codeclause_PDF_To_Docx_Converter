@@ -1,0 +1,12 @@
+Steps you need to follow:
+
+1. At very first 'run the python code'.
+
+2. After running the python code, you will get a link (http://127.0.0.1:5000). Copy this link your chrome tab, you will be redirect to main webpage where you can upload your pdf files.
+
+3. When you reach the main webpage. 'Select your pdf files which you want to convert it into docx.'
+
+4. Tap on 'convert' and then wait for few sec.
+
+5. Finally tap on 'Download in Word' when you see it after few sec, to get your file downloaded in word.
+  
